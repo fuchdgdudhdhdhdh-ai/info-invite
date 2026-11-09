@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: telegram-invite-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: WEBHOOK_HOST
+        sync: false
